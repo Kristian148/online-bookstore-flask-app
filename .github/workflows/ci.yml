@@ -48,15 +48,26 @@ jobs:
           # Exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-      # Step 6: Run tests with pytest
+      # Step 6: Debug and run tests
+      - name: Debug test discovery
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Directory contents:"
+          ls -la
+          echo "Tests directory contents:"
+          ls -la tests/
+          echo "Python path:"
+          python -c "import sys; print('\n'.join(sys.path))"
+          
       - name: Run tests with pytest
         run: |
-          pytest
-
-      # Step 7: Generate coverage report
+          PYTHONPATH=. python -m pytest tests/ -v
+          
+      # Step 7: Generate coverage report  
       - name: Generate coverage report
         run: |
-          pytest --cov=app --cov=models --cov-report=xml --cov-report=term-missing
+          PYTHONPATH=. python -m pytest tests/ --cov=app --cov=models --cov-report=xml --cov-report=term-missing
 
       # Step 8: Upload coverage to Codecov (optional)
       - name: Upload coverage to Codecov
