@@ -62,12 +62,12 @@ jobs:
           
       - name: Run tests with pytest
         run: |
-          PYTHONPATH=. python -m pytest tests/ -v
+          PYTHONPATH=. python -m pytest
           
       # Step 7: Generate coverage report  
       - name: Generate coverage report
         run: |
-          PYTHONPATH=. python -m pytest tests/ --cov=app --cov=models --cov-report=xml --cov-report=term-missing
+          PYTHONPATH=. python -m pytest --cov=app --cov=models --cov-report=xml --cov-report=term-missing
 
       # Step 8: Upload coverage to Codecov (optional)
       - name: Upload coverage to Codecov
