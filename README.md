@@ -1,6 +1,6 @@
 # Online Bookstore Flask Application
 
-[![CI/CD Pipeline](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/Kristian148/online-bookstore-flask-app/actions/workflows/ci.yml/badge.svg)](https://github.com/Kristian148/online-bookstore-flask-app/actions/workflows/ci.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Flask](https://img.shields.io/badge/Flask-3.0.3-green.svg)](https://flask.palletsprojects.com/)
 [![Tests](https://img.shields.io/badge/tests-26%20passing-brightgreen.svg)](#testing)
